@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Roboto:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;}
+
+/* Testing box for css grid */
+.box {
+	@apply
+		bg-indigo-700
+		text-gray-100
+		min-w-full
+		h-32
+		min-h-full
+		rounded;
+}
+
+.overview-grid {
+	grid-template-columns: 4fr 3fr;
+}
