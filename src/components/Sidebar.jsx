@@ -79,6 +79,17 @@ const Sidebar = () => {
                 House Plants
               </span>
             </NavLink>
+            <NavLink
+              to={'/GardenPlants'}
+              onClick={handleCloseSideBar}
+              className={({ isActive }) =>
+                isActive ? activeLink : normalLink
+              }>
+              <span className='text-xl'><GiCube /></span>
+              <span className='capitalize'>
+              Garden Plants
+              </span>
+            </NavLink>
             <p className={normalLink}>
               <span className='text-xl text-gray-300'><GiCube /></span>
               <span className='capitalize text-gray-300'>
