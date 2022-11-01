@@ -7,6 +7,7 @@ export const links = [
         links: [
             {
                 name: 'Overview', 
+                active: true,
                 icon: <GiCube />,
             },
         ],
@@ -16,10 +17,12 @@ export const links = [
         links: [
             {
                 name: 'HousePlants', 
+                active: true,
                 icon: <RiPlantFill />,
             },
             {
                 name: 'GardenPlants', 
+                active: false,
                 icon: <GiCube />, 
             }
         ],
@@ -30,10 +33,12 @@ export const links = [
         links: [
             {
                 name: 'Plants', 
+                active: false,
                 icon: <GiCube />, 
             },
             {
                 name: 'Devices', 
+                active: false,
                 icon: <GiCube />, 
             }
         ],

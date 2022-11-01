@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom';
 import { Navbar, Header, Sidebar } from './components';
 import { Overview, Devices, GardenPlants, HousePlants, Plants } from './pages';
 
@@ -38,17 +38,17 @@ const App = () => {
 
             {/* Routing */}
             <div>
-              <Routes>
-                <Route path='/overview' element={<Overview />} />
+                <Routes>
+                  <Route path='/overview' element={<Overview />} />
 
-                {/* Monitor */}
-                <Route path='/houseplants' element={<HousePlants />} />
-                <Route path='/gardenplants' element={<GardenPlants />} />
+                  {/* Monitor */}
+                  <Route path='/houseplants' element={<HousePlants />} />
+                  {/* <Route path='/gardenplants' element={<GardenPlants />} /> */}
 
-                {/* Manage */}
-                <Route path='/plants' element={<Plants />} />
-                <Route path='/devices' element={<Devices />} />
-              </Routes>
+                  {/* Manage */}
+                  {/* <Route path='/plants' element={<Plants />} />
+                  <Route path='/devices' element={<Devices />} /> */}
+                </Routes>
             </div>
           </div>
         </div >

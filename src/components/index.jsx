@@ -10,3 +10,4 @@ export { default as PlantsList } from './PlantsList';
 export { default as OverviewStatCards } from './OverviewStatCards';
 export { default as TodaysForecast } from './TodaysForecast'; 
 export { default as WeeklyForecast } from './WeeklyForecast';
+export { default as RainfallChart } from './RainfallChart';

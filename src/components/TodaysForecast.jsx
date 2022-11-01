@@ -2,7 +2,7 @@ import React from 'react'
 
 const TodaysForecast = () => {
   return (
-    <div className='bg-white shadow-md rounded-xl p-6 text-gray-500 h-36'>
+    <div className='bg-white shadow-md rounded-xl p-6 text-gray-500 h-32'>
       <p>Sunny</p>
       <div className="flex items-center space-x-6">
         <div className='flex items-center justify between'>
