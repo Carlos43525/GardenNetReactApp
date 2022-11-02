@@ -1,64 +1,41 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { Dashboard } from './pages';
 import { Helmet } from 'react-helmet';
-import { BrowserRouter, Route, Routes, Redirect } from 'react-router-dom';
-import { Navbar, Header, Sidebar } from './components';
-import { Overview, Devices, GardenPlants, HousePlants, Plants } from './pages';
+import { ChakraProvider } from '@chakra-ui/react';
+import { RenderContainer, RenderedContent, Content } from 'components';
+import theme from 'theme/theme';
 
-import { useStateContext } from './contexts/ContextProvider';
-
+// Keep these Tailwind files until transition is made to ChakraUI
+import '@fontsource/manrope/400.css';
+import '@fontsource/manrope/600.css';
+import '@fontsource/manrope/700.css';
+import '@fontsource/manrope/800.css';
 import './input.css';
 import './dist/output.css';
 
 const App = () => {
-  const { activeMenu } = useStateContext();
-
-  // const activeMenu = true;
-
   return (
-    <div>
-      <BrowserRouter>
-          <Helmet>
-            <meta name="viewport" content="initial-scale=1, width=device-width" />
-          </Helmet>
-          <div className='flex relative'>
-            {/* Active menu or not */}
-            {activeMenu ? (
-              <div className='w-72 fixed sidebar bg-white'>
-                <Sidebar />
-              </div>
-            ) : (
-              <div className='w-0'>
-                {/* Sidebar w-0 */}
-              </div>
-            )}
-            <div className={`w-full bg-main-bg min-h-screen 
-          ${activeMenu ? 'md:ml-72' : 'flex-2'}`
-            }>
-
-              {/* Navbar */}
-              <div className='fixed md:static bg-main-bg navbar w-full'>
-                <Navbar />
-              </div>
-
-              {/* Routing */}
-              <div>
-                <Routes>
-                  <Route path='/overview' element={<Overview />} />
-
-                  {/* Monitor */}
-                  <Route path='/houseplants' element={<HousePlants />} />
-                  <Route path='/gardenplants' element={<GardenPlants />} />
-
-                  {/* Manage */}
-                  {/* <Route path='/plants' element={<Plants />} />
-                  <Route path='/devices' element={<Devices />} /> */}
-                </Routes>
-              </div>
-            </div>
-          </div >
-      </BrowserRouter>
-    </div>
-
+    <BrowserRouter>
+      <Helmet>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Helmet>
+      {/* Sidebar and others go here */}
+      <ChakraProvider theme={theme} >
+        {/* Content provides the container for the entire page. RenderContainer/Content provide 
+            containers for the page content. */}
+        <Content w={{ base: '100%', xl: 'calc(100% - 275px)' }} >
+          <RenderContainer >
+            <RenderedContent>
+              <Routes>
+                <Route path='/dashboard' element={<Dashboard />} />
+                <Route path='/' element={<Navigate to='/dashboard' />} /> 
+              </Routes>
+            </RenderedContent>
+          </RenderContainer>
+        </Content>
+      </ChakraProvider>
+    </BrowserRouter>
   )
 }
 

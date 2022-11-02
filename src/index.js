@@ -1,19 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-
 import { ContextProvider } from './contexts/ContextProvider';
+
+
 
 import './input.css';
 import './dist/output.css';
+import App from 'App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ContextProvider>
     <React.StrictMode>
       <App />
-    </React.StrictMode>
+      </React.StrictMode>
   </ContextProvider>,
 );
 
