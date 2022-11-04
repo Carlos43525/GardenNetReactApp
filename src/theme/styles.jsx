@@ -4,6 +4,10 @@ export const globalStyles = {
 	colors: {
 		gray: {
 			700: '#1f2733'
+		}, 
+		teal: 
+		{
+			300: '#68D391'
 		}
 	},
 	styles: {

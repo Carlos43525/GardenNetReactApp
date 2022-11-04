@@ -1,8 +1,8 @@
 // Component exports for easy access across codebase
 
+import Heatmap from './Charts/Heatmap';
+
 export {default as Header } from './Header';
-export {default as Sidebar } from './Sidebar';
-export {default as Navbar } from './Navbar';
 export {default as Notification } from './Notification';
 export {default as HousePlantsStatCard} from './HousePlantsStatCard';
 export { default as HousePlantsTempChart } from './HousePlantsTempChart'; 
@@ -20,7 +20,16 @@ export { default as TodayForecast } from './Overview/TodayForecast';
 
 export { default as Card } from './Card/Card'; 
 export { default as CardBody } from './Card/CardBody'; 
+export { default as CardHeader } from './Card/CardHeader'; 
 export { default as IconsBox } from './Icons/IconBox';
 export { default as Content } from './Utility/Content';
 export { default as RenderedContent } from './Utility/RenderedContent';
 export { default as RenderContainer } from './Utility/RenderContainer';
+export { default as Sidebar } from './Sidebar/Sidebar';
+export { default as SidebarResponsive } from './Sidebar/SidebarResponsive';
+export { default as Navbar } from './Navbar/Navbar';
+export {default as NavbarLinks } from './Navbar/NavbarLinks';
+
+export { default as AreaChart } from './Charts/AreaChart';
+export { default as Heatmap } from './Charts/Heatmap';
+
