@@ -8,8 +8,6 @@ import CardHeader from "components/Card/CardHeader";
 import TaskRow from "./TaskRow";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
-
-
 const Tasks = ({ title, date, importantTasks, otherTasks }) => {
     const textColor = useColorModeValue("gray.700", "white");
     return (
@@ -55,6 +53,7 @@ const Tasks = ({ title, date, importantTasks, otherTasks }) => {
                             <TaskRow
                                 name={row.name}
                                 icon={row.icon}
+                                iconColor={row.iconColor}
                                 info={row.info}
                                 dt={row.dt}
                             />
@@ -72,6 +71,7 @@ const Tasks = ({ title, date, importantTasks, otherTasks }) => {
                             <TaskRow
                                 name={row.name}
                                 icon={row.icon}
+                                iconColor={row.iconColor}
                                 info={row.info}
                                 dt={row.dt}
                             />

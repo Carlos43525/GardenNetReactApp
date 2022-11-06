@@ -2,6 +2,7 @@ import React from 'react';
 // Chakra imports
 import {
   Flex,
+  Box,
   Grid,
   Image,
   SimpleGrid,
@@ -26,10 +27,12 @@ import Tasks from './components/Tasks';
 import Timeline from './components/Timeline';
 
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa';
+import { MdWaterDrop } from 'react-icons/md';
 import { GoCircuitBoard } from 'react-icons/go';
 import { GiPlantSeed } from 'react-icons/gi';
 import { TbPlantOff } from 'react-icons/tb';
 import { RiPlantFill } from 'react-icons/ri';
+import { HiOutlineStatusOffline } from 'react-icons/hi';
 
 // Temporary data for tasks list.
 // Important: Add smart ass quip to the end of important tasks for fun.  
@@ -38,13 +41,15 @@ const importantTasks = [
     name: "Water Plant",
     info: "An office plant is critically low on water! Again...",
     dt: "11/02/2022",
-    icon: FaArrowDown,
+    iconColor: "blue.400",
+    icon: MdWaterDrop,
   },
   {
     name: "Device Offline",
     info: "A garden device has suddenly gone offline. Did a bird eat it?",
     dt: "10/30/2022",
-    icon: FaArrowDown,
+    iconColor: "red.400",
+    icon: HiOutlineStatusOffline,
   },
 ];
 
@@ -53,24 +58,27 @@ const otherTasks = [
     name: "Water Plant",
     info: "An office plant is low on water.",
     dt: "10/28/2022",
-    icon: FaArrowDown,
+    iconColor: "blue.400",
+    icon: MdWaterDrop,
   },
   {
     name: "Fertilize Garden",
     info: "Garden bed 'A' is ready to be fertilized, captain!",
     dt: "10/25/2022",
-    icon: FaArrowUp,
+    iconColor: "green.400",
+    icon: RiPlantFill,
   },
   {
     name: "Repot",
     info: "An office plant is ready to be repotted when you are.",
     dt: "10/22/2022",
-    icon: FaArrowUp,
+    iconColor: "green.400",
+    icon: RiPlantFill,
   },
 
 ];
 
- const timelineData = [
+const timelineData = [
   {
     logo: GoCircuitBoard,
     title: "New device added",
@@ -90,11 +98,11 @@ const otherTasks = [
     color: "red.400",
   },
   {
-  logo: RiPlantFill,
-  title: "3 House plants added",
-  date: "22 DEC 7:20 PM",
-  color: "green.400",
-  }, 
+    logo: RiPlantFill,
+    title: "3 House plants added",
+    date: "22 DEC 7:20 PM",
+    color: "green.400",
+  },
   {
     logo: GoCircuitBoard,
     title: "2 new devices added",
@@ -109,31 +117,31 @@ const Dashboard = () => {
   return (
     <Flex flexDirection='column' pt={{ base: "120px", md: "75px" }}>
       {/* Top bar with sparkline stats */}
-      <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='24px' >
-        <SparkLineStats
-          title={"Active Devices"}
-          amount={"8/7"}
-          percentage={-13}
-          icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
-        />
-        <SparkLineStats
-          title={"Reports (hourly)"}
-          amount={"43"}
-          percentage={10}
-          icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
-        />
-        <SparkLineStats
-          title={"Total Plants"}
-          amount={"32"}
-          percentage={-2}
-          icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
-        />
-        <SparkLineStats
-          title={"Plants Underwatered"}
-          amount={"2"}
-          percentage={5}
-          icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
-        />
+      <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='24px' bg={{ lg: '', xl: "#271E4D" }} borderRadius={"5px"}>
+          <SparkLineStats
+            title={"Active Devices"}
+            amount={"8/7"}
+            percentage={-13}
+            icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+          />
+          <SparkLineStats
+            title={"Reports (hourly)"}
+            amount={"43"}
+            percentage={10}
+            icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+          />
+          <SparkLineStats
+            title={"Total Plants"}
+            amount={"32"}
+            percentage={-2}
+            icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+          />
+          <SparkLineStats
+            title={"Plants Underwatered"}
+            amount={"2"}
+            percentage={5}
+            icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
+          />
       </SimpleGrid>
       {/* Rainfall graph and sunlight heatmap */}
       <Grid

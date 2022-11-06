@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
-import { Dashboard } from './pages';
+import { Dashboard, HousePlants} from './pages';
 import { Helmet } from 'react-helmet';
 import { ChakraProvider, Portal, useDisclosure } from '@chakra-ui/react';
 import { RenderContainer, RenderedContent, Content } from 'components';
@@ -60,6 +60,7 @@ const App = () => {
             <RenderedContent>
               <Routes>
                 <Route path='/dashboard' element={<Dashboard />} />
+                <Route path='/houseplants' element={<HousePlants />} />
                 <Route path='/' element={<Navigate to='/dashboard' />} />
               </Routes>
             </RenderedContent>

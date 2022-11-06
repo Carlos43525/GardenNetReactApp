@@ -1,4 +1,5 @@
 import Dashboard from "pages/Overview/Dashboard";
+import HousePlants from "pages/HousePlants/HousePlants";
 import Main from "pages/Main";
 
 import {
@@ -34,7 +35,7 @@ const routes = [
           path: "/houseplants", 
           name: "House Plants", 
           icon: <HomeIcon color="inherit" />,
-          component: Dashboard,
+          component: HousePlants,
       }, 
       {
         path: "", 

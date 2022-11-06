@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 
 
-const TaskRow = ({ name, info, icon, dt }) => {
+const TaskRow = ({ name, info, icon, iconColor, dt }) => {
     const textColor = useColorModeValue("gray.700", "white");
     return (
         <Flex my="1rem" justifyContent="space-between">
@@ -17,10 +17,10 @@ const TaskRow = ({ name, info, icon, dt }) => {
                     display="flex"
                     alignItems="center"
                     justifyContent="center"
-                    w="35px"
-                    h="35px"
+                    w="40px"
+                    h="40px"
                 >
-                    <Icon as={icon} />
+                    <Icon fontSize={"25px"} as={icon} color={iconColor}/>
                 </Box>
                 <Flex direction="column">
                     <Text

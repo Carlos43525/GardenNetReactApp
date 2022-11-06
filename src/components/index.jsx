@@ -28,7 +28,9 @@ export { default as RenderContainer } from './Utility/RenderContainer';
 export { default as Sidebar } from './Sidebar/Sidebar';
 export { default as SidebarResponsive } from './Sidebar/SidebarResponsive';
 export { default as Navbar } from './Navbar/Navbar';
-export {default as NavbarLinks } from './Navbar/NavbarLinks';
+export { default as NavbarLinks } from './Navbar/NavbarLinks';
+
+export { default as PlantStatusRow } from './TableRows/PlantStatusRow';
 
 export { default as AreaChart } from './Charts/AreaChart';
 export { default as Heatmap } from './Charts/Heatmap';
