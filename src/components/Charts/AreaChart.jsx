@@ -27,7 +27,7 @@ const lineChartOptions = {
               pan: true,
               reset: true,
             }
-          }, 
+        }, 
     },
     tooltip: {
         theme: "dark",
@@ -87,9 +87,9 @@ const lineChartOptions = {
             opacityTo: 0,
             stops: [],
         },
-        colors: ["#4FD1C5", "#2D3748"],
+        colors: ["#8AD5FE", "#2D3748"],
     },
-    colors: ["#4FD1C5", "#2D3748"],
+    colors: ["#8AD5FE", "#2D3748"],
 };
 
 

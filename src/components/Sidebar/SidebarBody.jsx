@@ -22,8 +22,6 @@ const SidebarBody = ({ routes }) => {
         const inactiveBg = useColorModeValue("white", "gray.700");
         const activeColor = useColorModeValue("gray.700", "white");
         const inactiveColor = useColorModeValue("gray.400", "gray.400");
-        const iconTeal = useColorModeValue("teal.300", "teal.300");
-
 
         return routes.map((prop, key) => {
             if (prop.redirect) {
@@ -72,7 +70,7 @@ const SidebarBody = ({ routes }) => {
                                 xl: "16px",
                             }}
                             py="12px"
-                            borderRadius="15px"
+                            borderRadius="5px"
                             _hover="none"
                             w="100%"
                             _active={{
@@ -89,7 +87,7 @@ const SidebarBody = ({ routes }) => {
                                     <Icon>{prop.icon}</Icon>
                                 ) : (
                                     <IconBox
-                                        bg="teal.300"
+                                        bg="#FF2A18"
                                         color="white"
                                         h="30px"
                                         w="30px"
@@ -140,7 +138,7 @@ const SidebarBody = ({ routes }) => {
                                 ) : (
                                     <IconBox
                                         bg={"white"}
-                                        color="teal.300"
+                                        color="#FF2A18"
                                         h="30px"
                                         w="30px"
                                         me="12px"
@@ -177,7 +175,7 @@ const SidebarBody = ({ routes }) => {
                     alignItems="center"
                     fontSize="11px"
                 >
-                    <Text fontSize="sm" mt="3px">
+                    <Text fontSize="2xl" mt="3px">
                         Garden Net
                     </Text>
                 </Link>

@@ -5,15 +5,17 @@ export const globalStyles = {
 		gray: {
 			700: '#1f2733'
 		}, 
-		teal: 
-		{
-			300: '#68D391'
+		redAccent: {
+			600: "#FF2A18"
+		}, 
+		darkPurple: {
+			800: "#281D43"
 		}
 	},
 	styles: {
 		global: (props) => ({
 			body: {
-				bg: mode('gray.50', 'gray.800')(props),
+				bg: mode('#EBEFF7', 'gray.800')(props),
 				fontFamily: "'Manrope', sans-serif"
 			},
 			html: {

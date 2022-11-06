@@ -109,7 +109,7 @@ const Dashboard = () => {
   return (
     <Flex flexDirection='column' pt={{ base: "120px", md: "75px" }}>
       {/* Top bar with sparkline stats */}
-      <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='24px'>
+      <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='24px' >
         <SparkLineStats
           title={"Active Devices"}
           amount={"8/7"}

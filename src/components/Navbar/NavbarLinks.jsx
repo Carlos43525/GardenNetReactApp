@@ -38,9 +38,10 @@ const NavbarLinks = ({ onOpen }) => {
             pe={{ sm: "0px", md: "16px" }}
             w={{ sm: "100%", md: "auto" }}
             alignItems="center"
-            flexDirection="row"
+            flexDirection="row" 
+            justifyContent={"end"}
         >
-            <InputGroup
+            {/* <InputGroup
                 cursor="pointer"
                 bg={inputBg}
                 borderRadius="15px"
@@ -81,8 +82,8 @@ const NavbarLinks = ({ onOpen }) => {
                     placeholder="Type here..."
                     borderRadius="inherit"
                 />
-            </InputGroup>
-            <NavLink to="/auth/signin">
+            </InputGroup> */}
+            <NavLink to="/signin">
                 <Button
                     ms="0px"
                     px="0px"
@@ -110,7 +111,7 @@ const NavbarLinks = ({ onOpen }) => {
             <SidebarResponsive 
             routes={routes}
             />
-            <SettingsIcon
+            {/* <SettingsIcon
                 cursor="pointer"
                 ms={{ base: "16px", xl: "0px" }}
                 me="16px"
@@ -119,7 +120,7 @@ const NavbarLinks = ({ onOpen }) => {
                 color={navbarIcon}
                 w="18px"
                 h="18px"
-            />
+            /> */}
             <Menu>
                 <MenuButton>
                     <BellIcon color={navbarIcon} w="18px" h="18px" />

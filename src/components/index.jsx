@@ -32,4 +32,5 @@ export {default as NavbarLinks } from './Navbar/NavbarLinks';
 
 export { default as AreaChart } from './Charts/AreaChart';
 export { default as Heatmap } from './Charts/Heatmap';
+export { default as Sparkline } from './Charts/Sparkline';
 

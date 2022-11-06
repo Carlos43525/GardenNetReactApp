@@ -105,7 +105,7 @@ const SidebarResponsive = ({routes}) => {
                                     <Icon>{prop.icon}</Icon>
                                 ) : (
                                     <IconBox
-                                        bg="teal.300"
+                                        bg="#FF2A18"
                                         color="white"
                                         h="30px"
                                         w="30px"
@@ -156,7 +156,7 @@ const SidebarResponsive = ({routes}) => {
                                 ) : (
                                     <IconBox
                                         bg={inactiveBg}
-                                        color="teal.300"
+                                        color="#FF2A18"
                                         h="30px"
                                         w="30px"
                                         me="12px"

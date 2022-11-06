@@ -32,7 +32,7 @@ const Navbar = ({ onOpen }) => {
             transition-property="box-shadow, background-color, filter, border"
             transitionTimingFunction="linear, linear, linear, linear"
             alignItems={{ xl: "center" }}
-            borderRadius="16px"
+            borderRadius="5px"
             display="flex"
             minH="75px"
             justifyContent={{ xl: "center" }}
