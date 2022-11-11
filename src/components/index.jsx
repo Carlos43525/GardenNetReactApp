@@ -14,7 +14,6 @@ export { default as TodaysForecast } from './TodaysForecast';
 export { default as WeeklyForecast } from './WeeklyForecast';
 export { default as RainfallChart } from './RainfallChart';
 
-
 export { default as QuickStats } from './Overview/QuickStats'; 
 export { default as TodayForecast } from './Overview/TodayForecast'; 
 
@@ -31,6 +30,8 @@ export { default as Navbar } from './Navbar/Navbar';
 export { default as NavbarLinks } from './Navbar/NavbarLinks';
 
 export { default as PlantStatusRow } from './TableRows/PlantStatusRow';
+
+export { default as WarningAlert } from './Utility/WarningAlert'; 
 
 export { default as AreaChart } from './Charts/AreaChart';
 export { default as Heatmap } from './Charts/Heatmap';

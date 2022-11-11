@@ -8,7 +8,7 @@ import DonutChart from 'components/Charts/DonutChart';
 const PlantStats = ({ primaryColor, secondaryColor, size }) => {
     return (
         <Flex flexDirection='row' align='center' justify='center' >
-            <Card minH={{ base: "85px" }} >
+            <Card minH={{ base: "85px" }} h={"100%"} px={"4rem"}>
                 <CardBody >
                     <Flex flexDirection='row' align='center' justify='space-between' w='100%'>
                         <Flex align='center'>

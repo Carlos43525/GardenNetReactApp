@@ -19,11 +19,10 @@ import IconBox from 'components/Icons/IconBox';
 import Sparkline from 'components/Charts/Sparkline';
   
 const SparkLineStats = ({ title, amount, percentage, icon }) => {
-    const iconRed = useColorModeValue("#FF2A18", "#FF2A18");
     const textColor = useColorModeValue("white", "white");
 
   return (
-    <Card minH={{base: "85px"}} bg={"#271E4D"} >
+    <Card minH={{base: "100px"}} bg={"#271E4D"} >
       <CardBody >
         <Flex flexDirection='row' align='center' justify='center' w='100%'>
           <Stat me='auto'>
@@ -55,9 +54,9 @@ const SparkLineStats = ({ title, amount, percentage, icon }) => {
             {icon}
           </IconBox> */}
         </Flex>
-        <Center height='50px'>
+        {/* <Center height='50px'>
           <Divider orientation='vertical' />
-        </Center>
+        </Center> */}
       </CardBody>
     </Card>
   );

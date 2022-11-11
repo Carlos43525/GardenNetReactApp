@@ -33,6 +33,7 @@ import { GiPlantSeed } from 'react-icons/gi';
 import { TbPlantOff } from 'react-icons/tb';
 import { RiPlantFill } from 'react-icons/ri';
 import { HiOutlineStatusOffline } from 'react-icons/hi';
+import { WarningAlert } from 'components';
 
 // Temporary data for tasks list.
 // Important: Add smart ass quip to the end of important tasks for fun.  
@@ -116,6 +117,7 @@ const Dashboard = () => {
 
   return (
     <Flex flexDirection='column' pt={{ base: "120px", md: "75px" }}>
+      <WarningAlert  />
       {/* Top bar with sparkline stats */}
       <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='24px' bg={{ lg: '', xl: "#271E4D" }} borderRadius={"5px"}>
           <SparkLineStats
@@ -177,9 +179,6 @@ const Dashboard = () => {
           amount={30}
           data={timelineData}
         />
-
-
-
       </Grid>
     </Flex>
   )

@@ -17,7 +17,7 @@ import CardBody from "components/Card/CardBody";
 // Icons
 
 
-const WaterTable = ({ title, tableHeaders, data }) => {
+const AllHousePlants = ({ title, tableHeaders, data }) => {
     return (
         <Card  overflowX={{ sm: "scroll", xl: "hidden" }} >
             <CardHeader p='6px 0px 22px 0px'>
@@ -44,13 +44,14 @@ const WaterTable = ({ title, tableHeaders, data }) => {
                         {data.map((row) => {
                             return (
                                 <PlantStatusRow
-                                    key={row.name}
+                                    key={row.ID}
+                                    ID={row.ID} 
                                     name={row.name}
                                     img={row.img}
                                     location={row.location}
-                                    status={row.status}
+                                    fertilizerStatus={row.fertilizerStatus}
                                     moisture={row.moisture}
-                                    lastWatered={row.lastWatered}
+                                    datePlanted={row.datePlanted}
                                 />
                             );
                         })}
@@ -60,4 +61,4 @@ const WaterTable = ({ title, tableHeaders, data }) => {
         </Card>)
 }
 
-export default WaterTable
+export default AllHousePlants
