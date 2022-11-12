@@ -20,6 +20,7 @@ export { default as TodayForecast } from './Overview/TodayForecast';
 export { default as Card } from './Card/Card'; 
 export { default as CardBody } from './Card/CardBody'; 
 export { default as CardHeader } from './Card/CardHeader'; 
+export { default as PopupModal } from './Utility/PopupModal'; 
 export { default as IconsBox } from './Icons/IconBox';
 export { default as Content } from './Utility/Content';
 export { default as RenderedContent } from './Utility/RenderedContent';
