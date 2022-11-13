@@ -8,15 +8,14 @@ import {
     Th,
     Thead,
     Tr, 
-    Button, 
-
+    Button
 } from "@chakra-ui/react";
 // Custom components
 import { PlantStatusRow } from 'components';
 import Card from "components/Card/Card";
 import CardHeader from "components/Card/CardHeader";
 import CardBody from "components/Card/CardBody";
-import { PopupModal } from 'components';
+import AddNewPlant from './AddNewPlant';
 // Icons
 
 const AllHousePlants = ({ title, tableHeaders, data }) => {
@@ -27,7 +26,7 @@ const AllHousePlants = ({ title, tableHeaders, data }) => {
                     <Text fontSize='lg' color={"gray.700"} fontWeight='bold' pb='.5rem'>
                         {title}
                     </Text>
-                    <PopupModal 
+                    <AddNewPlant 
                     colorScheme='teal'
                     borderColor='green.400'
                     color='green.400'

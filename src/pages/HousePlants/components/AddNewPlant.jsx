@@ -20,13 +20,13 @@ import axios from 'axios';
 
 // A popup modal for components such as signs up and other forms. 
 
-const onCreate = () => 
-{
-  let plantData = {
-    Name: this.refs.Name.value, 
-    ScientificName: this.refs.ScientificName.value, 
-    Location: this.refs.Location.value
-  }; 
+// const onCreate = () => 
+// {
+//   let plantData = {
+//     Name: this.refs.Name.value, 
+//     ScientificName: this.refs.ScientificName.value, 
+//     Location: this.refs.Location.value
+//   }; 
 
   // fetch('https://garden-net-web-api.azurewebsites.net',{
   //   method: 'POST',
@@ -37,16 +37,15 @@ const onCreate = () =>
   //     this.setState({message:'New Employee is Created Successfully'});
   //   }
   // });
+//}
 
-}
-
-const PopupModal = (props) => {
+const AddNewPlant = (props) => {
   const { variant, children, ...rest } = props;
-  const styles = useStyleConfig("PopupModal", { variant });
+  // const styles = useStyleConfig("PopupModal", { variant });
   const { isOpen, onOpen, onClose } = useDisclosure()
 
-  const initialRef = React.useRef(null)
-  const finalRef = React.useRef(null)
+  // const initialRef = React.useRef(null)
+  // const finalRef = React.useRef(null)
 
   return (
     <>
@@ -70,20 +69,20 @@ const PopupModal = (props) => {
           <ModalBody pb={6}>
             <FormControl>
               <FormLabel>Name</FormLabel>
-              <Input ref="Name" placeholder='Plant Name' />
+              <Input  placeholder='Plant Name' />
             </FormControl>
             <FormControl mt={4}>
               <FormLabel>ScientificNamee</FormLabel>
-              <Input ref="ScientificName" placeholder='ScientificName' />
+              <Input  placeholder='ScientificName' />
             </FormControl>
             <FormControl mt={4}>
               <FormLabel>Location</FormLabel>
-              <Input ref="Location" placeholder='Location' />
+              <Input placeholder='Location' />
             </FormControl>
           </ModalBody>
 
           <ModalFooter>
-            <Button onClick={onCreate} colorScheme='blue' mr={3}>
+            <Button  colorScheme='blue' mr={3}>
               Save
             </Button>
             <Button onClick={onClose}>Cancel</Button>
@@ -94,4 +93,4 @@ const PopupModal = (props) => {
   )
 }
 
-export default PopupModal
+export default AddNewPlant

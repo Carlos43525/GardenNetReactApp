@@ -219,7 +219,6 @@ const SidebarResponsive = ({routes}) => {
                 w="18px"
                 h="18px"
                 ref={btnRef}
-                colorScheme="teal"
                 onClick={onOpen} 
                 cursor={"pointer"}
             />

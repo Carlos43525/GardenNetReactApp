@@ -20,6 +20,7 @@ import SidebarResponsive from "components/Sidebar/SidebarResponsive";
 import { NavLink } from "react-router-dom";
 import { ProfileIcon, SettingsIcon } from "components/Icons/Icons";
 import routes from "routes.js";
+import { Login } from 'Auth/Account/Login';
 
 
 
@@ -83,8 +84,9 @@ const NavbarLinks = ({ onOpen }) => {
                     borderRadius="inherit"
                 />
             </InputGroup> */}
-            <NavLink to="/signin">
-                <Button
+            {/* <NavLink to="/login"> */}
+            <Login />
+                {/* <Button
                     ms="0px"
                     px="0px"
                     me={{ sm: "2px", md: "16px" }}
@@ -97,17 +99,10 @@ const NavbarLinks = ({ onOpen }) => {
                             <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" />
                         )
                     }
-                    leftIcon={
-                        document.documentElement.dir ? (
-                            <ProfileIcon color={navbarIcon} w="22px" h="22px" me="0px" />
-                        ) : (
-                            ""
-                        )
-                    }
                 >
-                    <Text display={{ sm: "none", md: "flex" }}>Sign In</Text>
-                </Button>
-            </NavLink>
+                    <Text display={{ sm: "none", md: "flex" }}>Login</Text>
+                </Button> */}
+            {/* </NavLink> */}
             <SidebarResponsive 
             routes={routes}
             />

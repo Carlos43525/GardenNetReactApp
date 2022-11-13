@@ -9,11 +9,11 @@ const WarningAlert = () => {
   return (
     isVisible ? 
     (
-        <Alert status='warning' maxW={"750px"} mb={"2rem"}>
+        <Alert status='warning' maxW={"850px"} mb={"2rem"}>
         <AlertIcon />
         <Box>
           <AlertDescription>
-            This application is still under development. Not all data is live and some links will not work. 
+            This application is still under development. Not all data is live and many links and features will not work. 
           </AlertDescription>
         </Box>
         <CloseButton

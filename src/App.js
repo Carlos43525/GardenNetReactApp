@@ -7,6 +7,8 @@ import { RenderContainer, RenderedContent, Content } from 'components';
 import { Sidebar, Navbar } from 'components';
 import routes from 'routes.js';
 import theme from 'theme/theme';
+import { Login } from './Auth/Account/Login';
+import { Account } from './Auth/Account/Account'; 
 
 // Keep these Tailwind files until transition is made to ChakraUI
 import '@fontsource/manrope/400.css';
@@ -15,6 +17,7 @@ import '@fontsource/manrope/700.css';
 import '@fontsource/manrope/800.css';
 import './input.css';
 import './dist/output.css';
+import { ResetPassword } from 'Auth/Account/ResetPassword';
 
 const App = () => {
 
@@ -61,6 +64,8 @@ const App = () => {
               <Routes>
                 <Route path='/dashboard' element={<Dashboard />} />
                 <Route path='/houseplants' element={<HousePlants />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/account/reset-password' element={<ResetPassword/>} /> 
                 <Route path='/' element={<Navigate to='/dashboard' />} />
               </Routes>
             </RenderedContent>
